@@ -139,9 +139,9 @@ aside .sideBarItems a{
     border-radius:50%;
     color:white;
 }
-.noOfMsg:hover{
-    padding:0.4rem;
-}
+/* .sideBarItems a:hover .noOfMsg{
+    right:2rem;
+} */
 
 
 /* sidebar */
