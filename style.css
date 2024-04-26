@@ -110,7 +110,7 @@ aside .logo{
     top:1rem;
 }
 aside .h3{
-    font-weight:400;
+    font-weight:300;
 }
 aside .sideBarItems a{
     display:flex;
@@ -139,9 +139,19 @@ aside .sideBarItems a{
     border-radius:50%;
     color:white;
 }
-/* .sideBarItems a:hover .noOfMsg{
-    right:2rem;
-} */
-
 
 /* sidebar */
+
+/*main*/
+.gmailLogo img{
+    height:2.1rem;
+}
+.xLogo img{
+    height:2.1rem;
+}
+.swiggyLogo img{
+    height:2.2rem;
+}
+.instaLogo img{
+    height:2.1rem;
+}
