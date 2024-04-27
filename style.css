@@ -10,6 +10,14 @@
     --clr-warning:#ff4edc;
     --clr-light:rgba(4, 6, 20, 0.18);
 
+    --card-border-radius:2rem;
+    --border-radius-1:0.4rem;
+    --border-radius-2:0.8rem;
+    --border-radius-3:1.2rem;
+
+    --card-padding:1.7rem;
+    --padding-1:1.2rem;
+    --box-shadow:0 2rem 3rem var(--clr-light);
 }
 *{
     margin:0;
@@ -143,6 +151,20 @@ aside .sideBarItems a{
 /* sidebar */
 
 /*main*/
+main{
+    margin-top:1.4rem;
+    width:auto;
+}
+main .notifications{
+    background-color:white;
+    padding:var(--card-padding);
+    border-radius:var(--card-border-radius);
+    margin-top:1rem;
+    box-shadow:var(--box-shadow);
+    transition:all 0.3s ease;
+    height:auto;
+    width:20rem;
+}
 .gmailLogo img{
     height:2.1rem;
 }
@@ -154,4 +176,103 @@ aside .sideBarItems a{
 }
 .instaLogo img{
     height:2.1rem;
+}
+
+.whatsapp{
+    display:flex;
+    padding-left:0.8rem;
+    border-radius:0.8rem;
+    align-items:center;
+    background-color:rgb(15, 208, 15);
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    margin-bottom: 0.9rem;
+}
+.whatsappLogo{
+    margin-right:0.5rem;
+    padding-top:0.1rem;
+}
+.whatsapp p{
+    color:white;
+    font-size:0.9rem;
+}
+.notifications h2 span{
+    color:var(--clr-greyshade);
+}
+.gmail{
+    display:flex;
+    padding-left:0.8rem;
+    border-radius:0.8rem;
+    align-items:center;
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    background-color:#012417;
+    margin-bottom: 0.9rem;
+}
+.gmailLogo{
+    margin-right:0.5rem;
+    padding-top:0.1rem;
+}
+.gmail p{
+    color:white;
+    font-size:0.63rem;
+    position:relative;
+    bottom:0.1rem;
+}
+.gmail span{
+    margin-left:1rem;
+}
+.msg{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    margin-left:0.2rem;
+}
+.swiggy{
+    display:flex;
+    padding-left:0.8rem;
+    border-radius:0.8rem;
+    align-items:center;
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    background-color:white;
+    margin-bottom: 0.9rem;
+}
+.swiggy span{
+        margin-left:6.88rem;
+}
+.swiggy p{
+    color:var(--clr-greyshade);
+    font-size:0.7rem;
+    position:relative;
+    bottom:0.1rem;
+
+}
+.swiggyLogo{
+    margin-right:0.5rem;
+    padding-top:0.1rem;
+}
+.insta{
+    display:flex;
+    padding-left:0.8rem;
+    border-radius:0.8rem;
+    align-items:center;
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    background-color:white;
+    margin-bottom: 0.9rem;
+}
+.insta span{
+    margin-left:3.3rem;
+}
+.insta p{
+color:var(--clr-greyshade);
+font-size:0.7rem;
+position:relative;
+bottom:0.1rem;
+
+}
+.instaLogo{
+margin-right:0.5rem;
+padding-top:0.1rem;
 }
