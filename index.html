@@ -79,23 +79,36 @@
         </aside>
         <!-- Sidebar -->
         <main>
-           <h1>
-             Welcome Back Sathwikk!!
-           </h1>
+            <h1>
+                Welcome Ba<span>ck Sathwikk!!</span>
+              </h1>
+              <div class="calendar">
+                <div class="DateDay">
+                    <p id="date">01</p>
+                    <p id="day">Sunday</p>
+                </div>
+                <div class="MonYear">
+                    <p id="month">January</p>
+                    <p id="year">2020</p>
+                </div>
+              </div>
            <div class="notifications">
             <h2>Notifica<span>tions!!</span></h2>
             <div class="notifItems whatsapp">
                 <div class="whatsappLogo">
                     <img src="whatsappIcon.svg" alt="Whatsapp Logo">
                 </div>
-                <p>5 new messages from 2 chats  </p>
+                <div class="msg">
+                    <p>E-Cell <span>&#183; 2mins</span></p>
+                    <p style="font-size: 0.9rem;">ACM Meet Alert!</p>
+                </div>
             </div>
             <div class="notifItems gmail">
                 <div class="gmailLogo">
                     <img src="gmail.svg" alt="Gmail Icon">
                 </div>
                 <div class="msg">
-                <p>ce23b041@smail.iitm.ac.in <span>&#183; 10mins</span></p>
+                <p>ce23b041@smail.iitm.ac.in <span>&#183; 4mins</span></p>
                 <p style="font-size: 0.87rem;">E-Cell
                 | Merch Launch!</p>
             </div>
@@ -114,16 +127,65 @@
                     <img src="instagram.svg" alt="instaLogo">
                 </div>
                 <div class="msg">
-                    <p>Instagram &#183; Divya<span>&#183; 5mins</span></p>
+                    <p>Instagram &#183; Divya<span>&#183; 10mins</span></p>
                     <p style="font-size: 0.84rem; color:rgba(0, 0, 0, 0.929)">Sent a post</p>
                 </div>
             </div>
            </div>
+
+           <!-- toDoList -->
+           <div class="Tocontainer">
+            <h2>ToDo List</h2>
+            <div class="inputContainer">
+                <input type="text" class="todoInput" placeholder="New Task...">
+                <button class="addBtn">
+                    <i class="fa fa-plus-circle"></i>
+                </button>
+            </div>
+            <div class="filters">
+                <div class="filter" data-filter="completed">Completed</div>
+                <div class="filter" data-filter="pending">Pending</div>
+                <div class="deleteAll">Delete All</div>
+            </div>
+            <div class="todosContainer">
+                <ul class="todos">
+                    <img src="https://learntime.net/assets/todo-list/empty.svg" alt="Notasks" class="emptyImage">
+
+                </ul>
+            </div>
+           </div>
+            <div class="budgetTracker">
+                <h2>Balance <span>History</span></h2>
+                <div class="expenses minus">
+                    <p>Usha Cafe</p>
+                    <p >-90</p>
+                </div>
+                <div class="expenses add">
+                    <p>Daddy</p>
+                    <p >+2000</p>
+                </div>
+                <div class="expenses minus">
+                    <p>Zaitoon</p>
+                    <p>-300</p>
+                </div>
+                <div class="expenses minus">
+                    <p>Head Phones</p>
+                    <p class="minus">-2700</p>
+                </div>
+                <div class="expenses add">
+                    <p>Madhu</p>
+                    <p >+500</p>
+                </div>
+            </div>
+            <div class="WatchList"><a href="https://Chandaluri-Sathwik.github.io/imdbReplica/"><h3>Here's Your Watchlist!!</h3></a>
+            </div>
            
         </main>
     </div>
-    <script href="script.js">
-
+    
+    
+    <script src="script.js">
+      
     </script>
 </body>
 </html>
