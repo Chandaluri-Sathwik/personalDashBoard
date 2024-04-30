@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="container">
-
+       
         <!-- Sidebar -->
 
         <aside class="Sidebar">
@@ -31,7 +31,7 @@
             <h2>Sath<span class="greyshade">wik.</span></h2>
              </div>
 
-              <div class="close">
+              <div class="close" onclick=closeSideBar()>
                    <span class="material-symbols-outlined">
                 close
                 </span>
@@ -79,10 +79,19 @@
         </aside>
         <!-- Sidebar -->
         <main>
-            <h1>
+          <header> <h1>
                 Welcome Ba<span>ck Sathwikk!!</span>
               </h1>
-              <div class="calendar">
+              <div class="profileName">
+              <div class="profile">
+              <div class="name" onclick=showSidebar()>
+               <p>Sathwik </p>
+               <img src="down.png" alt="downward arrow"> 
+              </div>
+            <div class="profilePhoto">
+                <img src="icon.png" alt="profilePhotoIcon">
+            </div></div>
+            <div class="calendar">
                 <div class="DateDay">
                     <p id="date">01</p>
                     <p id="day">Sunday</p>
@@ -92,6 +101,10 @@
                     <p id="year">2020</p>
                 </div>
               </div>
+            </div>
+            </header> 
+        <div class="row">
+         <div class="firstSection">
            <div class="notifications">
             <h2>Notifica<span>tions!!</span></h2>
             <div class="notifItems whatsapp">
@@ -118,7 +131,7 @@
                     <img src="swiggy.svg" alt="swiggyLogo">
                 </div>
                 <div class="msg">
-                    <p>Swiggy<span>&#183; 7mins</span></p>
+                    <p>Swiggy<span> &#183;7mins</span></p>
                     <p style="font-size: 0.87rem; color:black">Food Incoming!</p>
                 </div>
             </div>
@@ -132,7 +145,9 @@
                 </div>
             </div>
            </div>
-
+           <div class="WatchList"><a href="https://Chandaluri-Sathwik.github.io/imdbReplica/"><h3>Here's Your Watchlist!!</h3></a>
+           </div>
+        </div>
            <!-- toDoList -->
            <div class="Tocontainer">
             <h2>ToDo List</h2>
@@ -177,8 +192,7 @@
                     <p >+500</p>
                 </div>
             </div>
-            <div class="WatchList"><a href="https://Chandaluri-Sathwik.github.io/imdbReplica/"><h3>Here's Your Watchlist!!</h3></a>
-            </div>
+        </div>
            
         </main>
     </div>

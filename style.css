@@ -17,7 +17,7 @@
 
     --card-padding:1.7rem;
     --padding-1:1.2rem;
-    --box-shadow:0 2rem 3rem var(--clr-light);
+    --box-shadow:0.7rem 2rem 3rem var(--clr-light);
 }
 *{
     margin:0;
@@ -39,7 +39,7 @@ body{
 .container{
     display:grid;
     width:96%;
-    gap:1.8rem;
+    gap:1.5rem;
     grid-template-columns:14rem auto ;
     margin:0 auto;
 }
@@ -62,12 +62,13 @@ h4{
 h5{
     font-size:0.77rem;
 }
-.profile-photo{
-    width:2.8rem;
-    height:2.8rem;
-    border-radius:50%;
-    overflow: hidden;
+.firstSection{
+    display:flex;
+    flex-direction:column;
+    width:22.5vw;
 }
+
+
 .text-muted{
     color:var(--clr-info-dark);
 }
@@ -92,6 +93,7 @@ b{
 /* sidebar */
 aside{
     height:100vh;
+    width:17vw;
 }
 aside .top{
     background-color:var(--clr-white);
@@ -106,7 +108,9 @@ aside .logo{
 }
 .close{
     display:none;
+    cursor:pointer;
 }
+
 .sideBarItems{
     background-color:var(--clr-white);
     display:flex;
@@ -115,13 +119,15 @@ aside .logo{
     position:relative;
     top:1rem;
 }
+
+
 aside .h3{
     font-weight:300;
 }
 aside .sideBarItems a{
     display:flex;
     color:var(--clr-info-dark);
-    margin-left:2rem;
+    margin-left:1.5rem;
     align-items:center;
     height:3.7rem;
     transition:all  .1s ease-in;
@@ -136,6 +142,28 @@ aside .sideBarItems a{
     color:black;
     margin-left:0rem;
     border-left:4px solid var(--clr-dark);
+}
+
+@media screen and (max-width:900px){
+    .close{
+        display:block;
+        align-self: center;
+    }
+}
+@media screen and (max-width:650px){
+    aside{
+        width:40vw;
+    }
+}
+@media screen and (max-width:475px){
+    aside{
+        width:50vw;
+    }
+}
+@media screen and (max-width:375px){
+    aside{
+        width:55vw;
+    }
 }
 .noOfMsg{
     position:absolute;
@@ -152,30 +180,63 @@ aside .sideBarItems a{
 main{
     margin-top:1.4rem;
     width:auto;
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-        grid-template-rows: minmax(0.5rem,auto);
-        grid-gap:1rem;
+}
+main header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:75vw;
+}
+.profileName{
+    display:flex;
+    justify-content: space-between;
+}
+.profile{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:flex-end;
+    margin-right:2rem;
 
 }
-main h1{
-    grid-column:1/6;
-    grid-row:1/2;
+.profilePhoto{
+    width:3.1rem;
+    height:3.1rem;
+    border-radius:50%;
+    overflow: hidden;
+    margin-left:1rem;
 }
-main .notifications{
-    grid-column:1/3;
-    grid-row:2/3;
+.profilePhoto img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
 }
-main .Tocontainer{
-    grid-column:3/5;
-    grid-row:2/4;
+.name{
+    display:flex;
+    color:var(--clr-dark);
+   cursor:pointer;
+    
 }
-grid .budgetTracker{
-    grid-column: 5/6;
-    grid-row:2/3;
+.name img{
+    height:1rem;
+    line-height: 1rem;
+}
+.name p{
+ line-height:1rem;
 }
 
-
+.row{
+    display:grid;
+    grid-template-columns:repeat(10,1fr);
+    grid-gap:2rem;
+    display:grid;
+    width:75vw;
+    justify-content: space-between;
+    
+}
+main header h1{
+    align-self: flex-start;
+}
 main .notifications{
     background-color:white;
     padding:var(--card-padding);
@@ -184,7 +245,7 @@ main .notifications{
     box-shadow:var(--box-shadow);
     transition:all 0.3s ease;
     height:auto;
-    width:20rem;
+    
 }
 main .notifications:hover{
     box-shadow:none;
@@ -312,8 +373,31 @@ margin-right:0.5rem;
 padding-top:0.1rem;
 }
 
+@media screen and (max-width:1250px) {
+    .whatsapp span{
+        margin-left:1rem;
+    }
+    .gmail p{
+        font-size:0.57rem;
+    }
+    .gmail span{
+        margin-left:0.45rem;
+    }
+    .swiggy span{
+        margin-left:1rem;
+    }
+    .profile{
+        margin-right:rem;
+    }
+    .row{
+        grid-gap:1rem;
+    }
+    .insta span {
+        margin-left:0.5rem;
+    }
+}
+
 main .Tocontainer{
-    width:25rem;
     padding:var(--card-padding);
     background:white;
     border-radius:var(--card-border-radius);
@@ -321,6 +405,8 @@ main .Tocontainer{
     box-shadow:var(--box-shadow);
     transition:all 0.3s ease;
     height:auto;
+    width:27.5vw;
+    /* width:40%; */
 }
 main .Tocontainer h2{
     text-align:center;
@@ -410,6 +496,8 @@ input[type="checkbox"]{
 }
 .todo:hover input:checked + span::before ,input:checked + span::before{
     border-color:#09bb21;
+    background:url(checkmark.jpg) 50% 50% no-repeat #09bb21;
+    background-image:cover;
 }
 .todo:hover span::before{
     border-color:#eee;
@@ -425,27 +513,24 @@ input[type="checkbox"]{
     height:20rem;
     overflow:overlay;
 }
-.todosContainer::-webkit-scrollbar-track{
-    background:rgb(247,247,247);
+
+.addBtn{
+    background-color:white;
 }
-.todosContainer::--webkit-scrollbar{
-    width:0;
-}
-.todosContainer:hover::-webkit-scrollbar{
-    width:0.5rem;
-}
-.todos-container::-webkit-scrollbar-thumb{
-    background:#d5d5d5;
-    border-radius:1rem;
+.addBtn:hover{
+    font-size:1.5rem;
+
 }
 .filters{
     display:flex;
     justify-content:space-between;
-    margin-bottom:1rem;
+    align-items:center;
+    margin-bottom:0.5rem;
+    font-size:600;
 }
 .filter{
     color:black;
-    padding:1rem 1.5rem;
+    padding:0.8rem 1.0rem;
     border-radius:1rem;
     transition:all 0.2s ease;
 }
@@ -457,7 +542,7 @@ input[type="checkbox"]{
     display: flex;
     color:black;
     text-align: center;
-    padding:1rem 1.5rem;
+    padding:0.8rem 1rem;
     cursor:pointer;
     transition:all 0.2s ease;
 }
@@ -468,7 +553,7 @@ input[type="checkbox"]{
     
 }
 .budgetTracker{
-        width:20rem;
+        width:22.5vw;
         padding:var(--card-padding);
         background:white;
         border-radius:var(--card-border-radius);
@@ -476,6 +561,7 @@ input[type="checkbox"]{
         box-shadow:var(--box-shadow);
         transition:all 0.3s ease;
         height:23rem;
+        overflow:visible;
 }
 .expenses{
     display:flex;
@@ -510,7 +596,6 @@ input[type="checkbox"]{
     
 }
 .WatchList{
-    width:20rem;
         padding:var(--card-padding);
         background:white;
         border-radius:var(--card-border-radius);
@@ -532,8 +617,8 @@ input[type="checkbox"]{
     cursor:pointer;
 }
 .calendar{
-    width:5rem;
-    height:4rem;
+    width:4.5rem;
+    height:3rem;
     background:#fff;
     display:flex;
     align-items:center;
@@ -545,25 +630,212 @@ input[type="checkbox"]{
     display:flex;
     align-items: center;
     justify-content: center;
-    font-size:0.6rem;
+    font-size:0.5rem;
     flex-direction:column;
 }
+main .notifications h2{
+    text-align: center;
+    margin-bottom:0.7rem;
+}
 .MonYear{
-    background-color:#f4351e;
+    background-color:var(--clr-dark);
     color:white;
     width:42%;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 .DateDay{
     width:58%;
 }
 #date{
-    font-size:1.2rem;
-    line-height:1.6rem;
+    font-size:1.0rem;
+    line-height:1.3rem;
 }
+@media screen and (max-width:1150px){
+    .container{
+        grid-gap:0rem;
+    }
+    .firstSection{
+        width:30vw;
+    }
+     main .Tocontainer{
+        width:37.5vw;
+    }
+     main .budgetTracker{
+        width:22.5vw;
+        grid-row: 2/3;
+       
+    }
+    .row{
+        grid-gap:1rem;
+    }
+   main  header{
+        width:70vw;
+    }
+}
+@media screen and (max-width:900px){
+    aside{
+        width:22vw;
+    }
+}
+@media screen and (max-width:950px){
+    .profilePhoto{
+        height:2.7rem;
 
+        width:2.7rem;
+    }
+}
+@media screen and (max-width:880px){
+    .row{
+        width:100vw;
+        grid-gap:2rem;
+        padding:3rem;
+        margin-top:0.7rem;
+        padding-top:0.5rem;
+    }
+    
+    aside{
+        display:none;
+    }
+    main header{
+        width:90vw;
+        align-self: center;
+        margin-left:1.5rem;
+    }
+    
+    main .firstSection{
+        width:35vw;
+        justify-content: space-around;
+    }
+    main .Tocontainer{
+        width:40vw;
+    }
+    main .budgetTracker{
+        width:35vw;
+    }
+    aside{
+        width:30vw;
+        height:100%;
+    }
+}
+@media screen and (max-width:800px){
+    main .firstSection{
+        width:40vw;
+    }
+    main .row{
+        padding-left:1rem;
+    }
+    main .Tocontainer{
+        width:45vw;
+    }
 
+}
+@media screen and (max-width:680px){
+    main header{
+        width:80vw;
+        margin-left:3rem;
+    }
+    main .firstSection{
+        display:block;
+        padding:3rem;
+        margin-left:2rem;
+        padding-top:0.5rem;
+        width:80vw;
+        padding-bottom:1rem;
+        
+    }
+    
+    main .Tocontainer{
+        grid-row:2/3;
+        width:70vw;
+        padding:3rem;
+        margin-left:4rem;
+    }
+    main .budgetTracker{
+        grid-row:3/4;
+        width:70vw;
+        padding:3rem;
+        margin-left:4rem;
+        height:auto;
+    }
+    .whatsapp span{
+        margin-left:6rem;
+    }
+    .gmail p{
+        font-size:0.57rem;
+    }
+    .gmail span{
+        margin-left:0.65rem;
+    }
+    .swiggy span{
+        margin-left:5.4rem;
+    }
+    .profile{
+        margin-right:1rem;
+    }
+    .row{
+        grid-gap:1rem;
+    }
+    .insta span {
+        margin-left:1.7rem;
+    }
+}
+@media screen and (max-width:600px){
+    main header{
+        margin-left:1rem;
+        width:90vw;
+    }
+    aside{
+        width:40vw;
+    }
+}
+@media screen and (max-width:500px){
+    aside{
+        width:45vw;
+    }
+    main .firstSection{
+        width:90vw;
+        margin-left:0;
+    }
+    .row{
+        margin-left:0;
+    }
+    main .Tocontainer{
+        margin-left:1.5rem;
+        width:80vw;
+    }
+    main .budgetTracker{
+        margin-left:1.5rem;
+        width:80vw;
+    }
+}
+@media screen and (max-width:430px){
+    aside{
+        width:55vw;
+    }
+    .name{
+        justify-content: space-around;
+    }
+    .profile{
+        margin-right:0.1rem;
+    }
+    main .firstSection{
+        padding-left:0.5rem;
+        position :relative;
+        left:0.5rem;
+    }
+    main .Tocontainer{
+        margin-left:0rem;
+        width:85vw;
+        padding-left:1.5rem;
+    }
+    main .budgetTracker{
+       position:relative;
+       right:1.4rem;
+        width:85vw;
+
+    }
+}
 
 
 

@@ -3,8 +3,22 @@ let todosJson=JSON.parse(localStorage.getItem(".todos")) ||[];
 const deleteAllBtn=document.querySelector(".deleteAll");
 const filters=document.querySelectorAll(".filter");
 const addBtn=document.querySelector(".addBtn");
+aside=document.querySelector("aside");
 const todosHtml=document.querySelector(".todos");
 let input=document.querySelector(".todoInput");
+let background=document.querySelector(".background");
+function showSidebar(){
+    const sidebar = document.querySelector('aside')
+    sidebar.style.display ='block';
+    sidebar.style.position='absolute';
+    sidebar.style.background="white";
+    sidebar.style.zIndex=4;
+    sidebar.style.height="100vh";
+}
+function closeSideBar(){
+    const sidebar=document.querySelector("aside");
+    sidebar.style.display="none";
+}
 let  filter="";
 showTodos();
 function getTodoHtml(todo,index){
@@ -74,7 +88,7 @@ filters.forEach(function (el){
             el.classList.remove("active");
             filter="";
         }else{
-            filters.forEach(tag=>tag.classList.remove("active"));
+            filters.forEach(tag => tag.classList.remove("active"));
             el.classList.add("active");
             filter=e.target.dataset.filter;
         }
