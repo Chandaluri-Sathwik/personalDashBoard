@@ -1,13 +1,10 @@
 :root{
-    --clr-primary:#7380ec;
     --clr-greyshade:#ff7782;
-    --clr-success:#41f1b6;
     --clr-white:#fff;
     --clr-info-dark:#7d8da1;
     --clr-info-light:#dce1eb;
     --clr-dark:#363949;
     --clr-color-background:#f6f6f9;/*u*/
-    --clr-warning:#ff4edc;
     --clr-light:rgba(4, 6, 20, 0.18);
 
     --card-border-radius:2rem;
