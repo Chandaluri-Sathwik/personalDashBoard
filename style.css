@@ -6,7 +6,7 @@
     --clr-info-dark:#7d8da1;
     --clr-info-light:#dce1eb;
     --clr-dark:#363949;
-    --clr-color-background:#f6f6f9;
+    --clr-color-background:#f6f6f9;/*u*/
     --clr-warning:#ff4edc;
     --clr-light:rgba(4, 6, 20, 0.18);
 
@@ -56,40 +56,10 @@ h2{
 h3{
     font-size:0.87rem;
 }
-h4{
-    font-size:0.8rem;
-}
-h5{
-    font-size:0.77rem;
-}
-.firstSection{
-    display:flex;
-    flex-direction:column;
-    width:22.5vw;
-}
-
-
-.text-muted{
-    color:var(--clr-info-dark);
-}
 p{
     color:var(--clr-dark-variant);
 }
-b{
-    color:var(--clr-dark);
-}
-.primary{
-    color:var(--clr-primary);
-}
-.success{
-    color:var(--clr-success);
-}
-.greyshade{
-    color:var(--clr-greyshade);
-}
-.warning{
-   color:var(--clr-warning);
-}
+
 /* sidebar */
 aside{
     height:100vh;
@@ -120,10 +90,10 @@ aside .logo{
     top:1rem;
 }
 
-
 aside .h3{
     font-weight:300;
 }
+
 aside .sideBarItems a{
     display:flex;
     color:var(--clr-info-dark);
@@ -142,6 +112,14 @@ aside .sideBarItems a{
     color:black;
     margin-left:0rem;
     border-left:4px solid var(--clr-dark);
+}
+.noOfMsg{
+    position:absolute;
+    right:2rem;
+    padding:0.3rem;
+    background-color:black;
+    border-radius:50%;
+    color:white;
 }
 
 @media screen and (max-width:900px){
@@ -165,18 +143,9 @@ aside .sideBarItems a{
         width:55vw;
     }
 }
-.noOfMsg{
-    position:absolute;
-    right:2rem;
-    padding:0.3rem;
-    background-color:black;
-    border-radius:50%;
-    color:white;
-}
-
 /* sidebar */
 
-/*main*/
+/*main-Section*/
 main{
     margin-top:1.4rem;
     width:auto;
@@ -187,6 +156,13 @@ main header{
     justify-content:space-between;
     width:75vw;
 }
+main header h1{
+    align-self: flex-start;
+}
+main h1 span{
+    color:var(--clr-greyshade)
+}
+/* Person logo */
 .profileName{
     display:flex;
     justify-content: space-between;
@@ -224,7 +200,39 @@ main header{
 .name p{
  line-height:1rem;
 }
+.calendar{
+    width:4.8rem;
+    height:3rem;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    border-radius:1rem;
+    z-index: 2;
+}
+.DateDay,.MonYear{
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:0.5rem;
+    flex-direction:column;
+}
 
+.MonYear{
+    background-color:var(--clr-dark);
+    color:white;
+    width:40%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.DateDay{
+    width:60%;
+}
+#date{
+    font-size:1.0rem;
+    line-height:1.3rem;
+}
+/* main section elements */
 .row{
     display:grid;
     grid-template-columns:repeat(10,1fr);
@@ -234,11 +242,13 @@ main header{
     justify-content: space-between;
     
 }
-main header h1{
-    align-self: flex-start;
+.firstSection{
+    display:flex;
+    flex-direction:column;
+    width:22.5vw;
 }
 main .notifications{
-    background-color:white;
+    background-color:var(--clr-white);
     padding:var(--card-padding);
     border-radius:var(--card-border-radius);
     margin-top:1rem;
@@ -250,42 +260,33 @@ main .notifications{
 main .notifications:hover{
     box-shadow:none;
 }
-main h1 span{
-    color:var(--clr-greyshade)
-}
+
 .notifications h2{
     position:relative;
     bottom:0.5rem;
 }
-.gmailLogo img{
+.logo img{
     height:2.1rem;
 }
-.xLogo img{
-    height:2.1rem;
-}
-.swiggyLogo img{
-    height:2.2rem;
-}
-.instaLogo img{
-    height:2.1rem;
-}
-
-.whatsapp{
+.logo{
     display:flex;
     padding-left:0.8rem;
     border-radius:0.8rem;
     align-items:center;
-    background-color:rgb(15, 208, 15);
     padding-top:0.2rem;
     padding-bottom:0.2rem;
     margin-bottom: 0.9rem;
+}
+
+.whatsapp{
+    background-color:rgb(15, 208, 15);
 }
 .whatsappLogo{
     margin-right:0.5rem;
     padding-top:0.1rem;
 }
 .whatsapp p{
-    color:white;
+    color:var(--clr-white);
     font-size:0.75rem;
     position:relative;
     bottom:0.1rem;
@@ -297,14 +298,7 @@ main h1 span{
     color:var(--clr-greyshade);
 }
 .gmail{
-    display:flex;
-    padding-left:0.8rem;
-    border-radius:0.8rem;
-    align-items:center;
-    padding-top:0.2rem;
-    padding-bottom:0.2rem;
     background-color:#012417;
-    margin-bottom: 0.9rem;
 }
 .gmailLogo{
     margin-right:0.5rem;
@@ -326,14 +320,8 @@ main h1 span{
     margin-left:0.2rem;
 }
 .swiggy{
-    display:flex;
-    padding-left:0.8rem;
-    border-radius:0.8rem;
-    align-items:center;
-    padding-top:0.2rem;
-    padding-bottom:0.2rem;
     background-color:white;
-    margin-bottom: 0.9rem;
+
 }
 .swiggy span{
         margin-left:6.88rem;
@@ -350,16 +338,11 @@ main h1 span{
     padding-top:0.1rem;
 }
 .insta{
-    display:flex;
-    padding-left:0.8rem;
-    border-radius:0.8rem;
-    align-items:center;
-    padding-top:0.2rem;
-    padding-bottom:0.2rem;
+   
     background-color:white;
 }
 .insta span{
-    margin-left:3.3rem;
+    margin-left:3.1rem;
 }
 .insta p{
 color:var(--clr-greyshade);
@@ -406,17 +389,19 @@ main .Tocontainer{
     transition:all 0.3s ease;
     height:auto;
     width:27.5vw;
-    /* width:40%; */
 }
 main .Tocontainer h2{
     text-align:center;
     margin-bottom:1rem;
 }
+main .notifications h2{
+    text-align: center;
+    margin-bottom:0.7rem;
+}
 .inputContainer{
     display:flex;
     justify-content:space-between;
-    margin-top:0.5rem;
-    
+    margin-top:0.5rem; 
 }
 .todoInput {
     flex:1;
@@ -443,7 +428,7 @@ main .Tocontainer h2{
     border-radius:1rem;
     margin-bottom:1rem;
 }
-.emptyImage{
+.todos img{
     margin:2rem auto 0;
     display:block;
 }
@@ -474,9 +459,7 @@ main .Tocontainer h2{
     display:flex;
     align-items:center;
     font-family: "Poppins";
-
 }
-
 .todo span{
     padding-left:1rem;
     position:relative;
@@ -516,7 +499,6 @@ input[type="checkbox"]{
     height:20rem;
     overflow:overlay;
 }
-
 .addBtn{
     background-color:white;
     align-self:center;
@@ -553,19 +535,19 @@ input[type="checkbox"]{
 .deleteAll:hover{
     border-radius:1rem;
     color:white;
-    background-color:blue;
-    
+    background-color:blue;   
 }
+/*Transaction History*/
 .budgetTracker{
-        width:22.5vw;
-        padding:var(--card-padding);
-        background:white;
-        border-radius:var(--card-border-radius);
-        margin-top:1rem;
-        box-shadow:var(--box-shadow);
-        transition:all 0.3s ease;
-        height:23rem;
-        overflow:visible;
+    width:22.5vw;
+    padding:var(--card-padding);
+    background:white;
+    border-radius:var(--card-border-radius);
+    margin-top:1rem;
+    box-shadow:var(--box-shadow);
+    transition:all 0.3s ease;
+    height:23rem;
+    overflow:visible;
 }
 .expenses{
     display:flex;
@@ -600,15 +582,15 @@ input[type="checkbox"]{
     
 }
 .WatchList{
-        padding:var(--card-padding);
-        background:white;
-        border-radius:var(--card-border-radius);
-        margin-top:1rem;
-        box-shadow:var(--box-shadow);
-        transition:all 0.3s ease;
-        height:auto;
-        display: flex;
-        align-items: center;
+    padding:var(--card-padding);
+    background:white;
+    border-radius:var(--card-border-radius);
+    margin-top:1rem;
+    box-shadow:var(--box-shadow);
+    transition:all 0.3s ease;
+    height:auto;
+    display: flex;
+    align-items: center;
 }
 .WatchList h3{
     font-size:2rem;
@@ -620,41 +602,7 @@ input[type="checkbox"]{
 .WatchList:hover {
     cursor:pointer;
 }
-.calendar{
-    width:4.8rem;
-    height:3rem;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    border-radius:1rem;
-    z-index: 2;
-}
-.DateDay,.MonYear{
-    height:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size:0.5rem;
-    flex-direction:column;
-}
-main .notifications h2{
-    text-align: center;
-    margin-bottom:0.7rem;
-}
-.MonYear{
-    background-color:var(--clr-dark);
-    color:white;
-    width:40%;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-}
-.DateDay{
-    width:60%;
-}
-#date{
-    font-size:1.0rem;
-    line-height:1.3rem;
-}
+
 @media screen and (max-width:1150px){
     .container{
         grid-gap:0rem;
@@ -840,6 +788,10 @@ main .notifications h2{
 
     }
 }
-
+@media screen and (max-width:405px){
+    h1{
+        font-size:1.6rem;
+    }
+}
 
 
