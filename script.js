@@ -3,10 +3,10 @@ let todosJson=JSON.parse(localStorage.getItem(".todos")) ||[];
 const deleteAllBtn=document.querySelector(".deleteAll");
 const filters=document.querySelectorAll(".filter");
 const addBtn=document.querySelector(".addBtn");
-aside=document.querySelector("aside");
 const todosHtml=document.querySelector(".todos");
-let input=document.querySelector(".todoInput");
+const input=document.querySelector(".todoInput");
 let background=document.querySelector(".background");
+ let aside=document.querySelector("aside");
 function showSidebar(){
     const sidebar = document.querySelector('aside')
     sidebar.style.display ='block';
@@ -65,11 +65,11 @@ addBtn.addEventListener("click",()=>{
     }
     addTodo(todo);
 });
-function upateStatus(todo){
+function updateStatus(todo){
     let todoName=todo.parentElement.lastElementChild;
     if(todo.checked){
         todoName.classList.add("checked");
-        todosJson[todo.id].status="complete";
+        todosJson[todo.id].status="completed";
     }else{
         todoName.classList.remove("checked");
         todosJson[todo.id].status="pending";

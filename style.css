@@ -416,6 +416,7 @@ main .Tocontainer h2{
     display:flex;
     justify-content:space-between;
     margin-top:0.5rem;
+    
 }
 .todoInput {
     flex:1;
@@ -435,14 +436,16 @@ main .Tocontainer h2{
 .addBtn{
     border:none;
     outline:none;
-    font-size:1.3rem;
+    font-size:1.4rem;
     background:#41f1b6  ; 
     cursor:pointer;
     width:1rem;
     border-radius:1rem;
+    margin-bottom:1rem;
 }
 .emptyImage{
     margin:2rem auto 0;
+    display:block;
 }
 .todo{
     display:flex;
@@ -494,10 +497,10 @@ input[type="checkbox"]{
 .todo input:checked + span{
     text-decoration:line-through;
 }
-.todo:hover input:checked + span::before ,input:checked + span::before{
-    border-color:#09bb21;
-    background:url(checkmark.jpg) 50% 50% no-repeat #09bb21;
-    background-image:cover;
+.todo:hover input:checked + span::before,input:checked + span::before{
+    border-color:#05d120;
+    background:url(checkmark.jpg) 50% 50% no-repeat;
+    background-size:cover;
 }
 .todo:hover span::before{
     border-color:#eee;
@@ -516,6 +519,7 @@ input[type="checkbox"]{
 
 .addBtn{
     background-color:white;
+    align-self:center;
 }
 .addBtn:hover{
     font-size:1.5rem;
@@ -617,7 +621,7 @@ input[type="checkbox"]{
     cursor:pointer;
 }
 .calendar{
-    width:4.5rem;
+    width:4.8rem;
     height:3rem;
     background:#fff;
     display:flex;
@@ -640,12 +644,12 @@ main .notifications h2{
 .MonYear{
     background-color:var(--clr-dark);
     color:white;
-    width:42%;
+    width:40%;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
 .DateDay{
-    width:58%;
+    width:60%;
 }
 #date{
     font-size:1.0rem;
