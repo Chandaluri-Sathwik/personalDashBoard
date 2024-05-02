@@ -9,15 +9,17 @@ const input=document.querySelector(".todoInput");
 let background=document.querySelector(".background");
 let aside=document.querySelector("aside");
 let  filter="";
+let screenWidth=screen.width;
 showTodos();
 //To Show SideBar
 function showSidebar(){
+    if(screenWidth<=900){
     const sidebar = document.querySelector('aside')
     sidebar.style.display ='block';
     sidebar.style.position='absolute';
     sidebar.style.background="white";
     sidebar.style.zIndex=4;
-    sidebar.style.height="100vh";
+    sidebar.style.height="100%";}
 }
 //To close Sidebar
 function closeSideBar(){

@@ -265,7 +265,7 @@ main .notifications:hover{
 .logo img{
     height:2.1rem;
 }
-.logo{
+.firstSection .logo{
     display:flex;
     padding-left:0.8rem;
     border-radius:0.8rem;
@@ -789,6 +789,10 @@ input[type="checkbox"]{
     h1{
         font-size:1.6rem;
     }
+}
+.greyshade{
+    color:var(--clr-greyshade);
+    align-self:center;
 }
 
 
