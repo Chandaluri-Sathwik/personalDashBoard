@@ -111,7 +111,7 @@ aside .sideBarItems a{
 }
 .noOfMsg{
     position:absolute;
-    right:2rem;
+    right:1.7rem;
     padding:0.3rem;
     background-color:black;
     border-radius:50%;
@@ -123,6 +123,11 @@ aside .sideBarItems a{
     }
 }
 @media screen and (max-width:1170px){
+    aside{
+        width:18vw;
+    }
+}
+@media screen and (max-width:975px){
     aside{
         width:20vw;
     }
