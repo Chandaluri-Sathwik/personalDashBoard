@@ -1,6 +1,6 @@
 // input
 const  emptyImage=document.querySelector(".emptyImage");
-let todosJson=JSON.parse(localStorage.getItem(".todos")) ||[];
+let todosJson=JSON.parse(localStorage.getItem("todos")) ||[];
 const deleteAllBtn=document.querySelector(".deleteAll");
 const filters=document.querySelectorAll(".filter");
 const addBtn=document.querySelector(".addBtn");
@@ -78,6 +78,7 @@ addBtn.addEventListener("click",()=>{
 function updateStatus(todo){
     let todoName=todo.parentElement.lastElementChild;
     if(todo.checked){
+        console.log(todoName.classList);
         todoName.classList.add("checked");
         todosJson[todo.id].status="completed";
     }else{
@@ -90,16 +91,19 @@ function updateStatus(todo){
 function remove(todo){
     const index=todo.dataset.index;
     todosJson.splice(index,1);
-    showTodos();
     localStorage.setItem("todos",JSON.stringify(todosJson));
+    showTodos();
 }
 filters.forEach(function (el){
     el.addEventListener("click",(e)=>{
+        console.log(el.classList);
         if(el.classList.contains("active")){
             el.classList.remove("active");
             filter="";
         }else{
-            filters.forEach(tag => tag.classList.remove("active"));
+            filters.forEach((tag) =>{
+            tag.classList.remove("active")}
+            );
             el.classList.add("active");
             filter=e.target.dataset.filter;
         }
@@ -124,3 +128,6 @@ const allMonths=["January","February","March","April","May","June","July","Augus
  day.innerHTML=weekDays[today.getDay()];
  month.innerHTML=allMonths[today.getMonth()];
  year.innerHTML=today.getFullYear();
+
+
+ const apiKey="7260328f0b14484cb6e145842242005";

@@ -23,7 +23,6 @@
     text-decoration:none;
     border:0;
     list-style: none;
-
 }
 body{
    font-family: "Poppins";
@@ -60,7 +59,7 @@ p{
 /* sidebar */
 aside{
     height:100vh;
-    width:17vw;
+    width:15vw;
 }
 aside .top{
     background-color:var(--clr-white);
@@ -118,7 +117,11 @@ aside .sideBarItems a{
     border-radius:50%;
     color:white;
 }
-
+@media screen and (min-width:1440px){
+    aside{
+        width:13vw;
+    }
+}
 @media screen and (max-width:900px){
     .close{
         display:block;
@@ -425,9 +428,9 @@ main .notifications h2{
     border-radius:1rem;
     margin-bottom:1rem;
 }
-.todos img{
+.background{
     margin:2rem auto 0;
-    display:block;
+    display: block;
 }
 .todo{
     display:flex;
